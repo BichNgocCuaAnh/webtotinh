@@ -1,3 +1,44 @@
+#startScreen {
+    position: fixed;
+    inset: 0;
+    background: #ffd6e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.start-box {
+    text-align: center;
+}
+
+.start-title {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+#startBtn {
+    padding: 16px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    background: #ff4b5c;
+    color: white;
+    transition: 0.2s;
+}
+
+#startBtn:hover {
+    transform: scale(1.05);
+}
+
+.start-note {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #333;
+}
+
 .buttons {
     opacity: 0;
     pointer-events: none;

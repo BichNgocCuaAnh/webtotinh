@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     // ===== DOM =====
+    const startBtn = document.getElementById("startBtn");
+    const startScreen = document.getElementById("startScreen");
     const typingEl = document.getElementById("typing");
     const buttons = document.getElementById("buttons");
     const yesBtn = document.getElementById("yesBtn");
@@ -14,6 +16,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let started = false;
     let i = 0;
+    
+    startBtn.addEventListener("click", () => {
+
+    typingSound.play().catch(() => {});
+    typingSound.pause();
+    typingSound.currentTime = 0;
+
+    // ẩn màn start
+    startScreen.style.opacity = "0";
+
+    setTimeout(() => {
+        startScreen.style.display = "none";
+    }, 400);
+
+    // bắt đầu web
+    typeWriter();
+});
+
 
     function startTypingSound() {
         if (!started) {
