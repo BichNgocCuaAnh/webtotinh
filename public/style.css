@@ -1,0 +1,103 @@
+.buttons {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+
+/* khi hiện */
+.buttons.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+.buttons.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+}
+
+.buttons {
+    transform: scale(0.8);
+    transition: all 0.4s ease;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: #ffd6e0; /* hồng nhẹ */
+    text-align: center;
+}
+
+/* gradient vàng */
+.gradient-text {
+    background: linear-gradient(45deg, #ffd700, #ffb347);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* chữ phụ đen */
+.subtitle {
+    color: black;
+    font-size: clamp(16px, 4vw, 20px);
+    margin-top: 20px;
+    min-height: 80px;
+}
+
+/* layout */
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* nút giữa */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 14px 24px;
+    border-radius: 30px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* nút */
+#yesBtn {
+    background: #ff4b5c;
+    color: white;
+}
+
+#noBtn {
+    background: black;
+    color: white;
+}
+
+/* result */
+#result {
+    display: none;
+    margin-top: 30px;
+}
+
+/* ❤️ tim bay */
+.heart {
+    position: fixed;
+    bottom: -20px;
+    color: rgba(255, 0, 100, 0.7);
+    animation: floatUp linear forwards;
+    pointer-events: none;
+}
+
+@keyframes floatUp {
+    from {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-100vh) scale(1.5);
+        opacity: 0;
+    }
+}
